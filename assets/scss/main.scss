@@ -6,14 +6,21 @@
 
 body {
   display: flex;
+  background-position: bottom;
+  background-size:cover;
   flex-direction: column;
   min-height: 100vh;
-  background-color: $body-bg;
+  font-family: 'Amatic SC', cursive;
 }
 
 main {
   flex-grow: 1;
 }
 
+.drop-shadow {
+  filter: drop-shadow(2px 2px 2px black );
+}
 
-
+.quote {
+    transition: all 1s ease-in-out;
+}

@@ -10,62 +10,63 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
 </head>
 
 <!-- BACKGROUND SECTION -->
 
-<body id="background">
-    <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light justify-content-between">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-vials    "></i>
-                <span class="ml-2">Inspire</span>
-            </a>
+<body id="background" class="text-light drop-shadow">
 
-            <!-- WEATHER SECTION -->
-            <div id="cloud" class="col-2 text-right">
-                <span>WEATHER INFO</span>
+    <header class="container-fluid">
+        <div class="row justify-content-between py-3">
+            <div class="col-10">
+                <h3><i class="fas fa-vials"></i> INSPIRE</h3>
             </div>
-
-        </nav>
+            <!-- WEATHER SECTION -->
+            <div id="clouds" class="col-2 justify-content-center align-items-center"></div>
+        </div>
     </header>
 
-    <main>
-        <div class="row justify-content-center">
+    <main class="container-fluid">
 
-            <!-- CLOCK ELEMENT SECTION -->
-            <div id="clock" class="col-6">
-                <span>CLOCK</span>
-                <span>WELCOME MESSAGE</span>
-                <span>TASK INPUT</span>
+        <!-- CLOCK ELEMENT SECTION -->
+        <div id="clock" class="row justify-content-center align-items-center text-center h100">
+            <div class="col-6">
+                <h1>CLOCK</h1>
+                <h2>WELCOME MESSAGE</h2>
+
+                <!-- TASK LIST SECTION -->
+                <div id="tasks" class="row justify-content-center text-center">
+                    <div class="col-10">
+                        <h3>ADD TASK INPUT</h3>
+                        <h3>TASK LIST</h3>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-        <!-- TASK LIST SECTION -->
-        <div id="tasks">TASK LIST</div>
 
     </main>
 
-    <footer class="container-fluid bg-dark text-light">
-        <div class="row justify-content-between text-center">
+    <footer class="container-fluid py-3">
+        <div class="row justify-content-between align-items-center text-center">
 
             <!-- BACKGROUND INFO SECTION -->
-            <div id="background-info" class="col-2">
-                <span>BACKGROUND INFO</span>
+            <div id="background-info" class="col-1">
+                <h3>BG INFO</h3>
             </div>
 
             <!-- QUOTE SECTION -->
             <div id="quote" class="col-8">
-                <span>QUOTE</span>
-                <span><small>quote info</small></span>
+                <h2 class="mb-0">QUOTE</h2>
+                <h5 class="mt-0">SOURCE</h5>
             </div>
 
             <!-- TASK BUTTON SECTION -->
-            <div class="col-2">
-                <button>TASKS</button>
+            <div class="col-1">
+                <button class="btn-lg btn-outline-dark"><strong>TASKS</strong></button>
             </div>
 
         </div>

@@ -7,14 +7,14 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
 
-  /**@type {Background[]} */
-  backgrounds = []
+  /**@type {Background} */
+  backgrounds = null
 
-  /** @type {Cloud[]} */
-  clouds = []
+  /** @type {Cloud} */
+  clouds = null
 
-  /** @type {Quote[]} */
-  quotes = []
+  /** @type {Quote} */
+  quotes = null
 
   /** @type {Task[]} */
   tasks = []

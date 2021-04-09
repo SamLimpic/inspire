@@ -1,18 +1,12 @@
 export default class Cloud {
     constructor({ name, weather, main }) {
-        this.id = weather.id
-        this.description = weather.description
+        this.id = weather[0].id
+        this.description = weather[0].description
         this.temp = main.temp
         this.name = name
-        this.icon = weather.icon
-
-    }
-
-    get Template() {
-
-        return /*html*/`
-
-        `
+        this.icon = weather[0].icon
+        this.c = this.temp - 273
+        this.f = Math.floor(this.c * (9 / 5) + 32)
     }
 }
 
