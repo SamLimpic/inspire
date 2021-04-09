@@ -22,5 +22,20 @@ main {
 }
 
 .quote {
-    transition: all 1s ease-in-out;
+  display: block;
+}
+
+.quote-source {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.quote:hover ~ .quote-source{
+  visibility: visible;
+  height: auto;
+  width: auto;
+  opacity: 1;
 }
