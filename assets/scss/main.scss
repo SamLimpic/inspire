@@ -36,3 +36,17 @@ main {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   transition: all 1s ease;
 }
+
+.transparent-input {
+   background-color: transparent !important;
+   border: 1px;
+   border-color: var(--light);
+   border-style: solid;
+   color: var(--light);
+   font-size: 20pt;
+}
+
+.clock-size {
+  font-size: 100pt;
+  text-decoration: underline;
+}

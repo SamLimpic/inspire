@@ -10717,4 +10717,18 @@ main {
   transition: all 1s ease;
 }
 
+.transparent-input {
+  background-color: transparent !important;
+  border: 1px;
+  border-color: var(--light);
+  border-style: solid;
+  color: var(--light);
+  font-size: 20pt;
+}
+
+.clock-size {
+  font-size: 100pt;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */
