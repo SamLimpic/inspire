@@ -1,10 +1,10 @@
 import { ProxyState } from "../AppState.js"
 import Quote from "../Models/Quote.js"
-import { sandboxApi } from "./AxiosService.js"
+import { kanyeApi } from "./AxiosService.js"
 
 class QuotesService {
     async getQuotes() {
-        let res = await sandboxApi.get('quotes')
+        let res = await kanyeApi.get('')
         ProxyState.quotes = new Quote(res.data)
     }
 }
