@@ -10697,6 +10697,28 @@ main {
   flex-grow: 1;
 }
 
+.action {
+  cursor: pointer;
+}
+
+.locked-scroll {
+  height: 20vh;
+  overflow-y: scroll;
+}
+
+.locked-scroll::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.locked-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.locked-scroll::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
 .text-shadow {
   filter: drop-shadow(2px 2px 5px black);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -10729,6 +10751,14 @@ main {
 .clock-size {
   font-size: 100pt;
   text-decoration: underline;
+}
+
+.delete-size {
+  font-size: 16pt;
+}
+
+.task-card {
+  min-height: 50vh;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,10 +6,8 @@ import { tasksService } from "../Services/TasksService.js"
 function _draw() {
   let tasks = ProxyState.tasks
   let template = ''
-  tasks.forEach(v => template += v.Template)
-  document.getElementById("tasks").innerHTML = /*html*/`
-
-  `
+  tasks.forEach(task => template += task.Template)
+  document.getElementById("tasks").innerHTML = template
   console.log(tasks)
 }
 
@@ -21,9 +19,40 @@ export default class TasksController {
     this.getTasks()
   }
 
+  async addTask() {
+    try {
+      window.event.preventDefault()
+      let form = window.event.target
+      let newTask = {
+        description: form['task'].value,
+      }
+      await tasksService.addTask(newTask)
+      // @ts-ignore
+      form.reset()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  async deleteTask(id) {
+    try {
+      await tasksService.deleteTask(id)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   async getTasks() {
     try {
       await tasksService.getTasks()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  async boxCheck(id) {
+    try {
+      await tasksService.boxCheck(id)
     } catch (error) {
       console.error(error)
     }

@@ -47,15 +47,18 @@
                 </div>
                 <div class="mt-5">
                     <h2>Are you going make yourself useful today?</h2>
-                    <input type="text" class="transparent-input border-light text-shadow text-center rounded-lg w-75"
-                        aria-label="Add Task Input" aria-describedby="inputGroup-sizing-lg">
+                    <form id="task-form" onsubmit="app.tasksController.addTask()">
+                        <input type="text" id="task"
+                            class="transparent-input border-light text-shadow text-center rounded-lg w-75"
+                            aria-label="Add Task Input" aria-describedby="inputGroup-sizing-lg" autocomplete="off">
+                    </form>
                 </div>
 
             </div>
-            <div class="col-3 ml-auto card bg-dark h-50 shadow border-light fixed-bottom">
-                <h2 class="text-center"><u>Make Yourself Useful</u></h2>
+            <div class=" col-3 ml-auto card bg-dark h-50 shadow border-light fixed-bottom">
+                <h2 class="text-center py-1"><u>Make Yourself Useful</u></h2>
                 <h3>
-                    <ul id="tasks"></ul>
+                    <div id="tasks" class="locked-scroll pr-2"></div>
                 </h3>
             </div>
         </div>
