@@ -4,7 +4,7 @@ class ClocksService {
 
         setInterval(function () {
             clock.innerHTML = getCurrentTime()
-        }, 1)
+        }, 1000)
 
         function getCurrentTime() {
             let time = ''

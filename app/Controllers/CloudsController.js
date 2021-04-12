@@ -13,10 +13,10 @@ function _draw() {
     </div>
     <div class="row justify-content-center pr-5">
         <div class="col-4 m-0 p-0 text-right">
-            <img class="img-fluid m-0 p-0" src="http://openweathermap.org/img/wn/${clouds.icon}.png" alt="">
+            <img class="img-fluid m-0 p-0" src="http://openweathermap.org/img/wn/${clouds.icon}.png" alt="" onclick="app.cloudsController.toggleTemp()">
         </div>
         <div class="col-4 align-self-center text-center m-0 p-0">
-            <h2 class="m-0 p-0">${clouds.f}°</h2>
+            <h2 class="m-0 p-0" id="temp">${clouds.f}°</h2>
         </div>
         <div class="col-4  align-self-center m-0 p-0">
             <h1 class="m-0 p-0">${clouds.name}</h1>

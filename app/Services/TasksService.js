@@ -22,6 +22,7 @@ class TasksService {
         let task = ProxyState.tasks.find(task => task.id == id)
         task.completed ? task.completed = false : task.completed = true
         await sandboxApi.put(`Samwise/todos/${id}`, task)
+        ProxyState.tasks = ProxyState.tasks
     }
 }
 
