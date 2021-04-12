@@ -19,6 +19,10 @@ class AppState extends EventEmitter {
   /** @type {Task[]} */
   tasks = []
 
+  total = 0
+
+  completed = 0
+
 }
 
 // NOTE MAGIC!  NO TOUCHY!

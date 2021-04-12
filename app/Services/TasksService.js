@@ -19,8 +19,9 @@ class TasksService {
     }
 
     async boxCheck(id) {
-        let res = await sandboxApi.put(`Samwise/todos/${id}`)
-        res.completed ? false : true
+        let task = ProxyState.tasks.find(task => task.id == id)
+        task.completed ? task.completed = false : task.completed = true
+        await sandboxApi.put(`Samwise/todos/${id}`, task)
     }
 }
 

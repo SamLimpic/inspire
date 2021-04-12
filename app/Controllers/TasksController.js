@@ -7,7 +7,11 @@ function _draw() {
   let tasks = ProxyState.tasks
   let template = ''
   tasks.forEach(task => template += task.Template)
+  let total = ProxyState.tasks.length
+  let completed = ProxyState.tasks.filter(task => task.completed).length
   document.getElementById("tasks").innerHTML = template
+  document.getElementById("total").innerText = `${total}`
+  document.getElementById("completed").innerText = `${completed + ' / '}`
   console.log(tasks)
 }
 
