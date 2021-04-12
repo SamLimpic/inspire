@@ -1,3 +1,5 @@
+Preview: https://samlimpic.github.io/inspire/
+
 inspire
 ============
 
