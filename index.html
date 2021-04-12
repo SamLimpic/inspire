@@ -23,7 +23,8 @@
     <header class="container-fluid text-shadow">
         <div class="row justify-content-between py-3">
             <div class="col-10">
-                <h1><i class="fas fa-vials bg-light text-dark border-dark rounded-lg p-2 mx-3"></i> UNSPIRE</h1>
+                <h1><i class="fas fa-vials bg-light text-dark border-dark rounded-lg p-2 mx-3 action"
+                        onclick="app.backgroundsController.getBackgrounds()"></i> UNSPIRE</h1>
             </div>
             <!-- WEATHER SECTION -->
             <div id="clouds" class="col-2 justify-content-center align-items-center"></div>
@@ -55,9 +56,9 @@
                 </div>
 
             </div>
-            <div class=" col-3 ml-auto card bg-dark h-50 shadow border-light fixed-bottom">
-                <h2 class="text-center py-1"><u>Make Yourself Useful</u></h2>
-                <h4 class="text-center"><span id="completed"></span><span id="total"></span></h4>
+            <div class=" col-3 ml-auto card bg-dark h-75 shadow border-light fixed-bottom">
+                <h2 class="text-center py-1 mb-0"><u>Make Yourself Useful</u></h2>
+                <h3 class="text-center my-0"><span id="completed"></span><span id="total"></span></h3>
                 <h3>
                     <div id="tasks" class="locked-scroll pr-2"></div>
                 </h3>
@@ -69,7 +70,8 @@
     </main>
 
     <footer class="container-fluid">
-        <div class="row justify-content-center align-items-center text-center p-3">
+        <div class="row justify-content-center align-items-center text-center p-3 action"
+            onclick="app.quotesController.getQuotes()">
 
             <!-- QUOTE SECTION -->
             <div class="col-10">
