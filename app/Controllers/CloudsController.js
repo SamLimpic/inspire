@@ -16,7 +16,7 @@ function _draw() {
             <img class="img-fluid m-0 p-0" src="http://openweathermap.org/img/wn/${clouds.icon}.png" alt="" onclick="app.cloudsController.toggleTemp()">
         </div>
         <div class="col-4 align-self-center text-center m-0 p-0">
-            <h2 class="m-0 p-0" id="temp">${clouds.f}°</h2>
+            <h2 class="m-0 p-0" id="temp">${clouds.toggle}°</h2>
         </div>
         <div class="col-4  align-self-center m-0 p-0">
             <h1 class="m-0 p-0">${clouds.name}</h1>
@@ -40,5 +40,9 @@ export default class CloudsController {
     } catch (error) {
       console.error(error)
     }
+  }
+
+  toggleTemp() {
+    cloudsService.toggleTemp()
   }
 }

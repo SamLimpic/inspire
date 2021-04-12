@@ -22,7 +22,6 @@ class AppState extends EventEmitter {
   total = 0
 
   completed = 0
-
 }
 
 // NOTE MAGIC!  NO TOUCHY!

@@ -5,8 +5,9 @@ export default class Cloud {
         this.temp = main.temp
         this.name = name
         this.icon = weather[0].icon
-        this.c = this.temp - 273
+        this.c = Math.floor(this.temp - 273)
         this.f = Math.floor(this.c * (9 / 5) + 32)
+        this.toggle = this.f
     }
 }
 
