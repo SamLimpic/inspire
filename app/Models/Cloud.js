@@ -7,7 +7,25 @@ export default class Cloud {
         this.icon = weather[0].icon
         this.c = Math.floor(this.temp - 273)
         this.f = Math.floor(this.c * (9 / 5) + 32)
-        this.toggle = this.f
+    }
+
+    get Template() {
+
+        return /*html*/`
+    <div class="row align-content-end pr-3">
+        <div class="col text-center mb-0 pb-0">
+            <h1 class="m-0 p-0"><u>${this.description}</u><small> in </small><u>${this.name}</u></h1>
+        </div>
+    </div>
+    <div class="row justify-content-around pr-5">
+        <div class="col-6 align-self-center text-right m-0 p-0">
+            <h1 class="m-0 p-0" id="temp">${this.f}°F</h1>
+        </div>
+        <div class="col-6 m-0 p-0 text-right">
+            <img class="img-fluid m-0 p-0 action" src="http://openweathermap.org/img/wn/${this.icon}.png" alt="" onclick="app.cloudsController.toggleTemp()">
+        </div>
+    </div>
+        `
     }
 }
 

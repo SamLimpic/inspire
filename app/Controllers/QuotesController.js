@@ -8,7 +8,6 @@ function _draw() {
   document.getElementById("quotes").innerText = /*html*/`
   ${quotes.quote}
   `
-  console.log(quotes)
 }
 
 //Public

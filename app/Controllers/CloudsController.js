@@ -5,22 +5,7 @@ import { cloudsService } from "../Services/CloudsService.js"
 //Private
 function _draw() {
   let clouds = ProxyState.clouds
-  document.getElementById("clouds").innerHTML = /*html*/`
-    <div class="row align-content-end pr-3">
-        <div class="col text-center mb-0 pb-0">
-            <h1 class="m-0 p-0"><u>${clouds.description}</u><small> in </small><u>${clouds.name}</u></h1>
-        </div>
-    </div>
-    <div class="row justify-content-around pr-5">
-        <div class="col-6 align-self-center text-right m-0 p-0">
-            <h1 class="m-0 p-0" id="temp">${clouds.toggle}°F</h1>
-        </div>
-        <div class="col-6 m-0 p-0 text-right">
-            <img class="img-fluid m-0 p-0 action" src="http://openweathermap.org/img/wn/${clouds.icon}.png" alt="" onclick="app.cloudsController.toggleTemp()">
-        </div>
-    </div>
-  `
-  console.log(clouds)
+  document.getElementById("clouds").innerHTML = clouds.Template
 }
 
 //Public

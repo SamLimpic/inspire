@@ -12,7 +12,6 @@ function _draw() {
   document.getElementById("tasks").innerHTML = template
   document.getElementById("total").innerText = `${total}`
   document.getElementById("completed").innerText = `${completed + ' / '}`
-  console.log(tasks)
 }
 
 //Public

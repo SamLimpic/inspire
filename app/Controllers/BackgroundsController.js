@@ -6,7 +6,6 @@ import { backgroundsService } from "../Services/BackgroundsService.js"
 function _draw() {
   let backgrounds = ProxyState.backgrounds
   document.body.style.backgroundImage = `url(${backgrounds.url})`
-  console.log(backgrounds)
 }
 
 //Public

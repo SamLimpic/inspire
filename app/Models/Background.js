@@ -4,13 +4,6 @@ export default class Background {
         this.url = id.large_url
         this.source = id.site
     }
-
-    get Template() {
-
-        return /*html*/`
-
-        `
-    }
 }
 
 //#region BACKGROUND API
